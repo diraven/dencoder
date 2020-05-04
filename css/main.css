@@ -7,6 +7,7 @@ html, body {
 input, select, textarea, button {
     font-family: inherit;
     font-size: inherit;
+    padding: 1%;
 }
 
 #pda {
@@ -64,6 +65,7 @@ input, select, textarea, button {
     width: 20%;
     left: 44%;
     top: 0;
+    height: 40%;
 }
 
 #pda .screen #encode {
@@ -71,7 +73,7 @@ input, select, textarea, button {
     background-color: darkgreen;
     width: 20%;
     left: 44%;
-    top: 20%;
+    top: 45%;
 }
 
 #pda .screen #decode {
@@ -79,5 +81,5 @@ input, select, textarea, button {
     background-color: darkgreen;
     width: 20%;
     left: 44%;
-    top: 30%;
+    top: 60%;
 }
