@@ -2,11 +2,13 @@ html, body {
     background: black;
     font-size: 24px;
     font-family: "Courier New", Courier, monospace !important;
+    color: greenyellow;
 }
 
 input, select, textarea, button {
     font-family: inherit;
     font-size: inherit;
+    color: inherit;
     padding: 1%;
 }
 
@@ -40,7 +42,6 @@ input, select, textarea, button {
 
 #pda .screen input, #pda .screen textarea {
     background: transparent;
-    color: greenyellow;
     border: solid 2px darkgreen;
 }
 
@@ -82,4 +83,12 @@ input, select, textarea, button {
     width: 20%;
     left: 44%;
     top: 60%;
+}
+
+#pda .screen #version {
+    position: absolute;
+    text-align: center;
+    width: 20%;
+    left: 44%;
+    bottom: 0;
 }
