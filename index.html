@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>De(n)coder</title>
+    <script type="text/javascript" src="bower_components/crypto-js/crypto-js.js"></script>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+</head>
+<form>
+    <input type="text" id="key" value="key">
+    <textarea id="encoded">encoded</textarea>
+    <textarea id="decoded">decoded</textarea>
+    <input type="button" id="encode" value="encode">
+    <input type="button" id="decode" value="decode">
+</form>
+<script>
+    let encoded = $('#encoded');
+    let decoded = $('#decoded');
+    let key = $('#key');
+    $('#encode').click(function () {
+        try {
+            let msg = CryptoJS.AES.encrypt(decoded.val(), key.val()).toString();
+            encoded.val(msg ? msg : 'error');
+        } catch (e) {
+            encoded.val('error');
+        }
+    });
+    $('#decode').click(function () {
+        try {
+            let msg = CryptoJS.AES.decrypt(encoded.val(), key.val()).toString(CryptoJS.enc.Utf8);
+            decoded.val(msg ? msg : 'error');
+        } catch (e) {
+            decoded.val('error');
+        }
+    });
+</script>
+</html>
