@@ -1,0 +1,81 @@
+html, body {
+    background: black;
+    font-size: 50px;
+    font-family: "Courier New", Courier, monospace !important;
+}
+
+input, select, textarea, button {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+#pda {
+    position: relative;
+    margin: 0 auto;
+    width: 1998px;
+    height: 1170px;
+    background-image: url("../img/bottom_background.jpg");
+}
+
+#pda .frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/top_pda.png");
+    pointer-events: none;
+}
+
+#pda .screen {
+    position: absolute;
+    left: 8%;
+    top: 12%;
+    width: 75%;
+    height: 76%;
+}
+
+#pda .screen input, #pda .screen textarea {
+    background: transparent;
+    color: greenyellow;
+    border: solid 2px darkgreen;
+}
+
+#pda .screen #decoded {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 40%;
+}
+
+#pda .screen #encoded {
+    position: absolute;
+    top: 0;
+    left: 67%;
+    height: 100%;
+    width: 40%;
+}
+
+#pda .screen #key {
+    position: absolute;
+    width: 20%;
+    left: 44%;
+    top: 0;
+}
+
+#pda .screen #encode {
+    position: absolute;
+    background-color: darkgreen;
+    width: 20%;
+    left: 44%;
+    top: 20%;
+}
+
+#pda .screen #decode {
+    position: absolute;
+    background-color: darkgreen;
+    width: 20%;
+    left: 44%;
+    top: 30%;
+}
