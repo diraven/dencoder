@@ -29,7 +29,7 @@
     let key = $('#key');
     $('#encode').click(function () {
         try {
-            let msg = CryptoJS.AES.encrypt(decoded.val(), key.val()).toString();
+            let msg = CryptoJS.AES.encrypt(decoded.val().trim(), key.val().trim()).toString();
             encoded.val(msg ? msg : 'error (wrong key or message?)');
         } catch (e) {
             encoded.val('error');
@@ -37,7 +37,7 @@
     });
     $('#decode').click(function () {
         try {
-            let msg = CryptoJS.AES.decrypt(encoded.val(), key.val()).toString(CryptoJS.enc.Utf8);
+            let msg = CryptoJS.AES.decrypt(encoded.val().trim(), key.val().trim()).toString(CryptoJS.enc.Utf8);
             decoded.val(msg ? msg : 'error (wrong key or message?)');
         } catch (e) {
             decoded.val('error');
